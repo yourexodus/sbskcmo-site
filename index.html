@@ -24,7 +24,8 @@
             font-weight: 400;
             font-size: 15px;
             line-height: 1.49;
-            background-image: url(wp-content/uploads/2019/11/LincolnMemorial.png);
+            /* Responsive Background Image configuration */
+            background-image: url('wp-content/uploads/2019/11/LincolnMemorial.png');
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -43,6 +44,7 @@
             max-width: 1240px;
             margin: 0 auto;
             padding: 0 20px;
+            box-sizing: border-box;
         }
         .ast-flex {
             display: flex;
@@ -55,6 +57,11 @@
         .site-header {
             background-color: #000000;
             padding: 20px 0;
+        }
+        .site-logo-img img {
+            display: block;
+            max-width: 100%;
+            height: auto;
         }
         .main-header-menu {
             list-style: none;
@@ -81,6 +88,13 @@
         }
         .hero-section h1 { color: #ffffff; font-size: 63px; margin: 20px 0; }
         .hero-section h4 { color: #ffffff; font-size: 25px; font-style: italic; }
+        .hero-graphic {
+            display: inline-block;
+            max-width: 100%;
+            width: 212px;
+            height: auto;
+            margin: 20px 0;
+        }
         
         .btn-learn-more {
             display: inline-block;
@@ -105,7 +119,12 @@
             padding: 60px 0;
             text-align: center;
         }
-        .quote-img { width: 75px; margin-bottom: 15px; }
+        .quote-img { 
+            width: 75px; 
+            max-width: 100%;
+            height: auto; 
+            margin-bottom: 15px; 
+        }
         .quote-text { font-family: "Playfair Display", serif; font-size: 21px; font-style: italic; color: #4c5863; }
         .quote-author { font-size: 15px; font-weight: 600; color: rgba(76,88,99,0.62); }
 
@@ -117,18 +136,29 @@
             text-align: center;
         }
         .showcase-section h2 { color: #ffffff; font-size: 32px; }
+        
         .showcase-grid {
             display: flex;
             justify-content: space-around;
             margin: 40px 0;
         }
         .showcase-grid h3 { color: #ffffff; font-size: 24px; }
+        
+        /* Fixed Formatting Layout for Project Images */
+        .showcase-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
         .showcase-image {
             max-width: 100%;
+            width: 1024px; /* Matches native file dimensions */
             height: auto;
-            margin-bottom: 30px;
-            border-radius: 4px;
-            box-shadow: 10px 10px 0px 1px rgba(0,0,0,0.07);
+            border-radius: 6px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+            display: block;
         }
 
         /* Footer */
@@ -181,7 +211,7 @@
                 <div class="ast-container">
                     <h4>KCMO Lets Explore options to make your life easier</h4>
                     <hr style="width: 8%; border: 1px solid #f96b8f; margin: 20px auto;">
-                    <img src="wp-content/uploads/2019/11/LincolnMemorial-1-e1573854357134.png" alt="Lincoln Memorial graphic" style="width:212px; height:auto; margin: 20px 0;">
+                    <img class="hero-graphic" src="wp-content/uploads/2019/11/LincolnMemorial-1-e1573854357134.png" alt="Lincoln Memorial graphic">
                     <h1>Work Smarter</h1>
                     <a class="btn-learn-more" href="about/">Learn more</a>
                 </div>
@@ -211,10 +241,12 @@
                         </div>
                     </div>
 
-                    <!-- Populated Project Images -->
-                    <img class="showcase-image" src="wp-content/uploads/2019/11/BMHMain-1024x594.png" alt="BMH Main Frontend Form View">
-                    <img class="showcase-image" src="wp-content/uploads/2019/11/Lookup-1024x522.png" alt="Lookup Backend Access Tables View">
-                    <img class="showcase-image" src="wp-content/uploads/2019/11/PictureTab-1024x518.png" alt="Picture Tab Database Interface View">
+                    <!-- Layout Wrapper for Fixed Formatting -->
+                    <div class="showcase-container">
+                        <img class="showcase-image" src="wp-content/uploads/2019/11/BMHMain-1024x594.png" alt="BMH Main Frontend Form View">
+                        <img class="showcase-image" src="wp-content/uploads/2019/11/Lookup-1024x522.png" alt="Lookup Backend Access Tables View">
+                        <img class="showcase-image" src="wp-content/uploads/2019/11/PictureTab-1024x518.png" alt="Picture Tab Database Interface View">
+                    </div>
                 </div>
             </section>
 
