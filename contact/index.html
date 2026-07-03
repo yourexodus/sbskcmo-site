@@ -12,51 +12,132 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Montserrat:700&display=fallback">
 
 <style>
+/* =========================
+   BASE (Astra-like reset)
+========================= */
 body {
-  font-family: 'Noto Sans', sans-serif;
   margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  color: #000;
+  background-color: #000;
+  background-image:
+    linear-gradient(to right, #000000, #000000),
+    url('assets/LincolnMemorial.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 
+/* =========================
+   HEADER (Astra-style light bar)
+========================= */
 .site-header {
-  padding: 20px;
   background: #fff;
   border-bottom: 1px solid #eee;
+  padding: 15px 20px;
 }
 
 .site-branding {
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 .main-nav a {
-  margin-right: 15px;
+  margin-left: 15px;
   text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+/* =========================
+   CONTAINER (Astra core behavior)
+========================= */
+.ast-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* =========================
+   PAGE CONTENT BOX
+========================= */
+.site-content {
+  background: transparent;
+}
+
+/* Title styling (Astra-like) */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  margin-bottom: 30px;
   color: #000;
 }
 
-.site-content {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
+/* =========================
+   CONTACT FORM (CF7 match)
+========================= */
+.wpcf7-form {
+  background: transparent;
+}
+
+.wpcf7-form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
 }
 
 .wpcf7-form input,
 .wpcf7-form textarea {
   width: 100%;
   padding: 12px;
-  margin: 10px 0 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #000;
+  font-family: inherit;
+  font-size: 14px;
 }
 
-.wpcf7-submit {
-  background: #000;
-  color: #fff;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 30px;
+.wpcf7-form textarea {
+  min-height: 140px;
+  resize: vertical;
 }
+
+/* Submit button (Astra-style button) */
+.wpcf7-submit {
+  margin-top: 15px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 10px 35px;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.wpcf7-submit:hover {
+  background: #000;
+}
+
+/* =========================
+   FOOTER (match original feel)
+========================= */
+.site-footer {
+  background: #111;
+  color: #ccc;
+  padding: 25px 20px;
+  margin-top: 60px;
+  font-size: 14px;
+  text-align: center;
+}
+</style>
 </style>
 
 </head>
