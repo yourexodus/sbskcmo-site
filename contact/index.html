@@ -172,23 +172,21 @@ h1 {
 
   <h1>Contact</h1>
 
-  <form action="https://formspree.io/f/mvzjdzgk" method="POST" class="wpcf7-form">
+   <form>
+        <label style="font-size:14px;">Name</label><br>
+        <input type="text" style="width:100%; padding:12px; margin:8px 0 18px; border:1px solid #ddd; border-radius:8px;">
 
-    <label>Name</label>
-    <input type="text" name="name" required>
+        <label style="font-size:14px;">Email</label><br>
+        <input type="email" style="width:100%; padding:12px; margin:8px 0 18px; border:1px solid #ddd; border-radius:8px;">
 
-    <label>Email</label>
-    <input type="email" name="email" required>
+        <label style="font-size:14px;">Message</label><br>
+        <textarea rows="5" style="width:100%; padding:12px; margin:8px 0 18px; border:1px solid #ddd; border-radius:8px;"></textarea>
 
-    <label>Subject</label>
-    <input type="text" name="subject">
-
-    <label>Message</label>
-    <textarea name="message" rows="6" required></textarea>
-
-    <button type="submit" class="wpcf7-submit">Send</button>
-
-  </form>
+        <button type="submit"
+          style="width:100%; padding:14px; background:#111; color:#fff; border:none; border-radius:8px; font-size:16px; cursor:pointer;">
+          Send Message
+        </button>
+      </form>
 
 </div>
 
