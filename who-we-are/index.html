@@ -1,185 +1,192 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Who We Are | SBSKCMO</title>
+<title>Contact – Small Business Solutions</title>
 
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
-            background:#111;
-        }
+<base href="https://yourexodus.github.io/sbskcmo-site/">
 
-        /* HEADER */
-        .site-header{
-            background:#0f0f0f;
-            padding:20px;
-        }
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Montserrat:700&display=fallback">
 
-        .header-inner{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            max-width:1200px;
-            margin:auto;
-        }
+<style>
 
-        .logo a{
-            color:#fff;
-            text-decoration:none;
-            font-size:20px;
-            font-weight:bold;
-        }
+/* =========================
+   BASE PAGE
+========================= */
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  min-height: 100vh;
+  color: #000;
+  position: relative;
+}
 
-        .site-nav a{
-            color:#ccc;
-            margin-left:15px;
-            text-decoration:none;
-        }
+/* Cinematic background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('assets/LincolnMemorial.png') center/cover no-repeat;
+  z-index: -1;
+}
 
-        .site-nav a:hover{
-            color:#fff;
-        }
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 20px;
+}
 
-        /* HERO */
-        .about-hero{
-            background:#0f0f0f;
-            padding:90px 20px;
-            text-align:center;
-        }
+.site-branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-        .hero-icon{
-            font-size:40px;
-            margin-bottom:10px;
-            color:#fff;
-        }
+.main-nav {
+  max-width: 1240px;
+  margin: 10px auto 0;
+}
 
-        .about-hero h1{
-            color:#fff;
-            font-size:3rem;
-            margin:0;
-        }
+.main-nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
 
-        /* MAIN GRID */
-        .about-main{
-            padding:80px 20px;
-        }
+/* =========================
+   CENTER LAYOUT
+========================= */
+.page-wrap {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
 
-        .about-grid{
-            display:grid;
-            grid-template-columns:repeat(3, 1fr);
-            gap:40px;
-            max-width:1200px;
-            margin:auto;
-        }
+/* =========================
+   CARD CONTAINER
+========================= */
+.contact-card {
+  background: #fff;
+  width: 100%;
+  max-width: 650px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
 
-        .about-col h2{
-            color:#fff;
-            margin-bottom:10px;
-        }
+/* Title */
+.contact-card h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  margin-bottom: 25px;
+}
 
-        .divider{
-            width:60px;
-            height:2px;
-            background:#444;
-            margin-bottom:20px;
-        }
+/* =========================
+   FORM
+========================= */
+.wpcf7-form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 14px;
+}
 
-        .about-col p{
-            color:#ccc;
-            line-height:1.8;
-            margin-bottom:15px;
-        }
+.wpcf7-form input,
+.wpcf7-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
 
-        .about-col strong{
-            color:#fff;
-        }
+.wpcf7-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
 
-        /* LOGOS */
-        .logo-grid{
-            display:grid;
-            grid-template-columns:repeat(2, 1fr);
-            gap:15px;
-            margin-top:20px;
-            align-items:center;
-        }
+.wpcf7-submit {
+  margin-top: 20px;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+}
 
-        .logo-grid img{
-            width:100%;
-            max-width:120px;
-            margin:auto;
-        }
+.wpcf7-submit:hover {
+  opacity: 0.9;
+}
 
-        /* FOOTER */
-        .site-footer{
-            background:#0f0f0f;
-            padding:30px;
-            text-align:center;
-        }
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+}
 
-        .site-footer p{
-            color:#888;
-            margin:0;
-        }
+</style>
 
-        /* RESPONSIVE */
-        @media(max-width:900px){
-            .about-grid{
-                grid-template-columns:1fr;
-            }
-
-            .about-hero h1{
-                font-size:2.2rem;
-            }
-
-            .logo-grid{
-                grid-template-columns:repeat(3, 1fr);
-            }
-        }
-
-        @media(max-width:500px){
-            .logo-grid{
-                grid-template-columns:repeat(2, 1fr);
-            }
-
-            .site-nav{
-                display:flex;
-                flex-wrap:wrap;
-                gap:10px;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
 
 <header class="site-header">
-    <div class="header-inner">
 
-        <div class="logo">
-            <a href="../index.html">SBSKCMO</a>
-        </div>
+  <div class="site-branding">
+    <a href="">
+      <img src="wp-content/uploads/2019/11/cropped-logo-126x118.png" style="max-width:120px;">
+    </a>
 
-        <nav class="site-nav">
-            <a href="../index.html">Home</a>
-            <a href="../about/">About</a>
-            <a href="../services/">Services</a>
-            <a href="../projects/">Projects</a>
-            <a href="../who-we-are/">Who We Are</a>
-            <a href="../contact/">Contact</a>
-        </nav>
-
+    <div>
+      <h2 style="margin:0;">Small Business Solutions</h2>
+      <p style="margin:5px 0 0; font-size:13px;">
+        Experts in Data Collection, Report Generation, and Sales Training
+      </p>
     </div>
+  </div>
+
+  <nav class="main-nav">
+    <a href="">Home</a>
+    <a href="about/">About</a>
+    <a href="services/">Services</a>
+    <a href="projects/">Projects</a>
+    <a href="who-we-are/">Who We Are</a>
+    <a href="contact/">Contact</a>
+  </nav>
+
 </header>
 
+<div class="page-wrap">
 
-<main>
+  <div class="contact-card">
 
-<section class="about-hero">
+    <h1>Contact</h1>
+
+    <section class="about-hero">
     <div class="hero-icon">⭐</div>
     <h1>Who We Are?</h1>
 </section>
@@ -234,12 +241,11 @@
     </div>
 </section>
 
-</main>
+  </div>
 
+</div>
 
 <footer class="site-footer">
-    <p>© 2026 Small Business Solutions KCMO. All Rights Reserved.</p>
+  <p>Overland Park, KS, USA | contactus@sbskcmo.com</p>
+  <p>© 2026 Small Business Solutions</p>
 </footer>
-
-</body>
-</html> 
